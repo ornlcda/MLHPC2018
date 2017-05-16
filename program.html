@@ -90,8 +90,8 @@
         <div class="col-md-7">
           <h2 class="featurette-heading">Workshop <span class="text-muted">Program</span></h2>
           <a href=http://www.visitsaltlake.com/includes/content/docs/media/SaltPalaceFloorPlans2012.pdf><p class="lead">Location: Salt Palace Convention Center, Room 355-D</p></a>
-          <p class="lead">Date: Monday November 14, 2017</p>
-          <p class="lead">Time: 9:00am - 12:30pm</p>
+          <p class="lead">Date: Monday November 13, 2017</p>
+          <p class="lead">Time: 9:00am - 5:00pm</p>
         </div>
         <div class="col-md-5">
           <!-- <img class="featurette-image img-responsive" data-src="holder.js/500x500/auto" alt="Generic placeholder image"> -->
@@ -100,15 +100,13 @@
       
        <hr class="featurette-divider">
       
-
+<!--
       <div class="row featurette">
         
         
         <div class="col-md-7">
 		<h2 class="lead">Workshop Introduction (9:00 am) <br> </h2>
 	  <p class="lead"><span class="text-muted">Steven Young, Oak Ridge National Laboratory</span></p>
-          <!-- <p>During the past few years, deep learning has made incredible progress towards solving many previously difficult Artificial Intelligence (AI) tasks.  Although the techniques behind deep learning have been studied for decades, they rely on large datasets and large computational resources, and so have only recently become practical for many problems.  Training deep neural networks is very computationally intensive: training one model takes tens of exaflops of work, and so HPC techniques are key to creating these models.  As in other fields, progress in AI is iterative, building on previous ideas.  This means that the turnaround time in training models is a key bottleneck to progress in AI—the quicker an idea can be realized as a trainable model, train it on a large dataset, and test it, the quicker that ways can be found of improving the models.  In this talk, Catanzaro will discuss the key insights that make deep learning work for many problems, describe the training problem, and detail the use of standard HPC techniques that allow him to rapidly iterate on his models.  He will explain how HPC ideas are becoming increasingly central to progress in AI and will also show several examples of how deep learning is helping solve difficult AI problems.</p> -->
-<!--           <p><a href=presentations/1-Janis.pdf>[Presentation]</a> <a href=http://dx.doi.org/10.1145/2834892.2834893>[Paper]</a></p> -->
 	</div>
 	      
       </div>
@@ -122,7 +120,7 @@
           <h2 class="lead">Distributed Training of Deep Neuronal Networks: Theoretical and Practical Limits of Scalability (9:10 am)<br> </h2>
 	  <p class="lead"><span class="text-muted">Janis Keuper</span></p>
           <p>This paper presents a theoretical analysis and practical evaluation of the main bottlenecks towards a scalable distributed solution for the training of Deep Neuronal Networks (DNNs). The presented results show, that the current state of the art approach, using data-parallelized Stochastic Gradient Descent (SGD), is quickly turning into a vastly communication bound problem. In addition, we present simple but fixed theoretic constraints, preventing effective scaling of DNN training beyond only a few dozen nodes. This leads to poor scalability of DNN training in most practical scenarios.</p>
-		<p><a href=papers/1_Keuper.pdf>[Presentation]</a></p> <!-- <a href=http://dx.doi.org/10.1145/2834892.2834893>[Paper]</a></p> -->
+		<p><a href=papers/1_Keuper.pdf>[Presentation]</a></p> 
 	</div>
         
       </div>
@@ -136,7 +134,7 @@
 		<h2 class="lead">Practical Efficiency of Asynchronous Gradient Descent (9:35 am)<br> </h2>
 		<p class="lead"><span class="text-muted">Guojing Cong</span></p>
 		<p>Stochastic gradient descent (SGD) and its distributed variants are essential to leverage modern computing resources for large-scale machine learning tasks. ASGD is one of the most popular asynchronous distributed variant of SGD. Recent mathematical analyses have shown that with certain assumptions on the learning task (and ignoring communication cost), ASGD exhibits linear speed-up asymptotically. However, as practically observed, ASGD does not lead linear speed-up as we increase the number of learners. Motivated by this, we investigate finite time convergence properties of ASGD. We observe that the learning rate used by mathematical analyses to guarantee linear speed-up can be very small (and practically sub-optimal with respect to convergence speed) as opposed to practically chosen learning rates (for quick convergence) which however exhibit sublinear speed-up. We show that such an observation can in fact be supported by mathematical analysis, i.e., in the finite time regime, better convergence rate guarantees can be proven for ASGD with small number of learners, thus indicating lack of linear speed up as we increase the number of learners. Thus we conclude that even with ignoring communication costs, there is an inherent inefficiency in ASGD with respect to increasing the number of learners.</p>
-		<p><a href=papers/2_Cong.pdf>[Presentation]</a></p> <!-- <a href=http://dx.doi.org/10.1145/2834892.2834893>[Paper]</a></p> -->
+		<p><a href=papers/2_Cong.pdf>[Presentation]</a></p> 
         </div>
         
       </div>
@@ -164,7 +162,7 @@
           <h2 class="lead">Communication Quantization for Data-parallel Training of Deep Neural Networks (10:30 am)<br></h2>
 		<p class="lead"><span class="text-muted">Nikoli Dryden</span></p>
 		<p>We study data-parallel training of deep neural networks on high-performance computing infrastructure. The key problem with scaling data-parallel training is avoiding severe communication/computation imbalance. We explore quantizing gradient updates before communication to reduce bandwidth requirements and compare it against a baseline implementation that uses the MPI allreduce routine. We port two existing quantization approaches, one-bit and threshold, and develop our own adaptive quantization algorithm. The performance of these algorithms is evaluated and compared with MPI_Allreduce when training models for the MNIST dataset and on a synthetic benchmark. On an HPC system, MPI_Allreduce outperforms the existing quantization approaches. Our adaptive quantization is comparable or superior for large layers without sacrificing accuracy. It is 1.76 times faster than the next best approach for the largest layers in our benchmark and achieves near-linear speedup in data-parallel training.</p>
-		<p><a href=papers/3_Dryden.pdf>[Presentation]</a></p> <!-- <a href=http://dx.doi.org/10.1145/2834892.2834893>[Paper]</a></p> -->
+		<p><a href=papers/3_Dryden.pdf>[Presentation]</a></p> 
         </div>
         
       </div>
@@ -178,7 +176,7 @@
           <h2 class="lead">Performance-Portable Autotuning of OpenCL Kernels for Convolutional Layers of Deep Neural Networks (10:55 am)<br></h2>
 		<p class="lead"><span class="text-muted">Yaohung Tsai</span></p>
 		<p>We present a portable and highly-optimized Deep Neural Network (DNN) algorithm and its implementation techniques. Our approach is a novel combination of existing HPC techniques that methodically applies autotuning as well as data layout and low-level optimizations that achieve performance matching and/or exceeding what is possible with either reverse engineering and manual assembly coding or proprietary vendor libraries. The former was done inside the maxDNN implementation and the latter is represented by cuDNN. Our work may be directly applied to the most time consuming part DNN workflow, namely the training process which often needs a restart when it stagnates due to, among other reasons, diminishing gradients and getting stuck in local minima. With the result of performance tests on a consumer-grade GPU with the lat- est High Bandwidth Memory (HBM) stack, our methodology can match a server grade hardware at a fraction of the price. Another tuning sweep on a new GPU architecture from a different vendor also attests to the portability of our approach and the quality of our implementation.</p>
-		<p><a href=papers/4_Tsai.pdf>[Presentation]</a></p> <!-- <a href=http://dx.doi.org/10.1145/2834892.2834893>[Paper]</a></p> -->
+		<p><a href=papers/4_Tsai.pdf>[Presentation]</a></p> 
         </div>
         
       </div>
@@ -195,7 +193,7 @@
 In this paper, we evaluate deep learning models using three different computing architectures to address these problems: quantum computing to train complex topologies, high performance computing (HPC) to automatically determine network topology, and neuromorphic computing for a low-power hardware implementation. Due to input size limitations of current quantum computers we use the MNIST dataset for our evaluation.
 The results show the possibility of using the three architectures in tandem to explore complex deep learning networks that are untrainable using a von Neumann architecture. We show that a quantum computer can find high quality val- ues of intra-layer connections and weights, while yielding a tractable time result as the complexity of the network increases; a high performance computer can find optimal layer-based topologies; and a neuromorphic computer can represent the complex topology and weights derived from the other architectures in low power memristive hardware.
 This represents a new capability that is not feasible with current von Neumann architecture. It potentially enables the ability to solve very complicated problems unsolvable with current computing technologies.</p>
-<p><a href=papers/5_Potok.pdf>[Presentation]</a></p> <!-- <a href=http://dx.doi.org/10.1145/2834892.2834893>[Paper]</a></p> -->
+<p><a href=papers/5_Potok.pdf>[Presentation]</a></p> 
         </div>
         
       </div>
@@ -209,7 +207,7 @@ This represents a new capability that is not feasible with current von Neumann a
           <h2 class="lead">Parallel Evolutionary Optimization for Neuromorphic Network Training (11:45 am)<br></h2>
 		<p class="lead"><span class="text-muted">Catherine Schuman</span></p>
 		<p>One of the key impediments to the success of current neuromorphic computing architectures is the issue of how best to program them. Evolutionary optimization (EO) is one promising programming technique; in particular, its wide applicability makes it especially attractive for neuromorphic architectures, which can have many different characteristics. In this paper, we explore different facets of EO on a spiking neuromorphic computing model called DANNA. We focus on the performance of EO in the design of our DANNA simulator, and on how to structure EO on both multicore and massively parallel computing systems. We evaluate how our parallel methods impact the performance of EO on Titan, the U.S.’s largest open science supercomputer, and BOB, a Beowulf-style cluster of Raspberry Pi’s. We also focus on how to improve the EO by evaluating commonality in higher performing neural networks, and present the result of a study that evaluates the EO performed by Titan.</p>
-		<p><a href=papers/6_Schuman.pdf>[Presentation]</a></p> <!-- <a href=http://dx.doi.org/10.1145/2834892.2834893>[Paper]</a></p> -->
+		<p><a href=papers/6_Schuman.pdf>[Presentation]</a></p> 
         </div>
         
       </div>
@@ -223,174 +221,14 @@ This represents a new capability that is not feasible with current von Neumann a
           <h2 class="lead">A Scalable Parallel Q-Learning Algorithm for Resource Constrained Decentralized Computing Environments (12:10 pm)<br></h2>
 		<p class="lead"><span class="text-muted">Miguel Camelo</span></p>
 		<p>The Internet of Things (IoT) is more and more becoming a platform for mission critical applications with stringent requirements in terms of response time and mobility. Therefore, a centralized High Performance Computing (HPC) environment is often not suitable or simply non-existing. Instead, there is a need for a scalable HPC model that supports the deployment of applications on the decentralized but resource constrained devices of the IoT. Recently, Reinforcement Learning (RL) algorithms have been used for decision making within applications by directly interacting with the environment. However, most RL algorithms are designed for centralized environments and are time and resource consuming. Therefore, they are not applicable to such constrained decentralized computing environments. In this paper, we propose a scalable Parallel Q-Learning (PQL) algorithm for resource constrained environments. By combining a table partition strategy together with a co-allocation of both processing and storage, we can significantly reduce the individ- ual resource cost and, at the same time, guarantee convergence and minimize the communication cost. Experimental results show that our algorithm reduces the required train- ing in proportion of the number of Q-Learning agents and, in terms of execution time, it is up to 24 times faster than several well-known PQL algorithms.</p>
-<p><a href=papers/7_Camelo.pdf>[Presentation]</a></p> <!-- <a href=http://dx.doi.org/10.1145/2834892.2834893>[Paper]</a></p> -->
+<p><a href=papers/7_Camelo.pdf>[Presentation]</a></p> 
         </div>
         
       </div>
 	  
       <hr class="featurette-divider">
       
-      <!--<hr class="featurette-divider">-->
-      
-
-      <!--<div class="row featurette">-->
-        
-        
-        <!--<div class="col-md-7">-->
-        <!--  <h2 class="lead">Keynote: Bryan Catanzaro<br>-->
-        <!--  2:00pm - 3:00pm</h2>-->
-        <!--  <p class="lead"><span class="text-muted">Baidu Research Silicon Valley Artificial Intelligence Laboratory</span></p>-->
-        <!--  <p>During the past few years, deep learning has made incredible progress towards solving many previously difficult Artificial Intelligence (AI) tasks.  Although the techniques behind deep learning have been studied for decades, they rely on large datasets and large computational resources, and so have only recently become practical for many problems.  Training deep neural networks is very computationally intensive: training one model takes tens of exaflops of work, and so HPC techniques are key to creating these models.  As in other fields, progress in AI is iterative, building on previous ideas.  This means that the turnaround time in training models is a key bottleneck to progress in AI—the quicker an idea can be realized as a trainable model, train it on a large dataset, and test it, the quicker that ways can be found of improving the models.  In this talk, Catanzaro will discuss the key insights that make deep learning work for many problems, describe the training problem, and detail the use of standard HPC techniques that allow him to rapidly iterate on his models.  He will explain how HPC ideas are becoming increasingly central to progress in AI and will also show several examples of how deep learning is helping solve difficult AI problems.</p>-->
-        <!--</div>-->
-        
-        <!--<div class="col-md-5">-->
-          <!--<img class="featurette-image img-responsive" src="bio_images/Catanzaro.jpg" alt="Bryan Catanzaro">-->
-        <!--</div>-->
-        
-      <!--</div>-->
-      
-      <!--<hr class="featurette-divider">-->
-      <!--<div class="row featurette">-->
-        
-        
-        <!--<div class="col-md-7">-->
-        <!--  <h2 class="lead">Coffee Break<br>-->
-        <!--  3:00pm - 3:30pm</h2>-->
-        <!--</div>-->
-      <!--</div>-->
-
-      <!--<hr class="featurette-divider">-->
-
-      <!--<div class="row featurette">-->
-      <!--  <div class="col-md-5">-->
-      <!--    <img class="featurette-image img-responsive" data-src="holder.js/500x500/auto" alt="Generic placeholder image">-->
-      <!--  </div>-->
-        <!-- 
-        <div class="col-md-7">
-          <h2 class="lead">Asynchronous Parallel Stochastic Gradient Descent - A Numeric Core for Scalable Distributed Machine Learning Algorithms<br>
-          3:30pm - 3:55pm</h2>
-          <p class="lead"><span class="text-muted">Janis Keuper and Franz-Josef Pfreundt</h2></span></p>
-          <p>The implementation of a vast majority of machine learning (ML) algorithms boils down
-to solving a numerical optimization problem. In this context, Stochastic
-Gradient Descent (SGD) methods have long proven to provide good results, both
-in terms of convergence and accuracy. Recently, several parallelization approaches
-have been proposed in order to scale SGD to solve very large ML problems.
-At their core, most of these approaches are following a MapReduce scheme.
-This paper presents a novel parallel updating algorithm for SGD, which utilizes
-the asynchronous single-sided communication paradigm.
-Compared to existing methods, Asynchronous Parallel Stochastic Gradient Descent (ASGD) provides faster convergence,
-at linear scalability and stable accuracy.</p>
-          <p><a href=presentations/1-Janis.pdf>[Presentation]</a> <a href=http://dx.doi.org/10.1145/2834892.2834893>[Paper]</a></p>
-        </div>
-        -->
-      <!--</div>-->
-      
-      <!--<hr class="featurette-divider">-->
-
-      <!--<div class="row featurette">-->
-      <!--  <div class="col-md-5">-->
-      <!--    <img class="featurette-image img-responsive" data-src="holder.js/500x500/auto" alt="Generic placeholder image">-->
-      <!--  </div>-->
-        <!-- 
-        <div class="col-md-7">
-          <h2 class="lead">HPDBSCAN – Highly Parallel DBSCAN<br>
-          3:55pm - 4:20pm</h2>
-          <p class="lead"><span class="text-muted">Markus Götz, Christian Bodenstein and Morris Riedel</h2></span></p>
-          <p>Clustering algorithms in the field of data-mining are used
-to aggregate similar objects into common groups. One of
-the best-known of these algorithms is called DBSCAN. Its
-distinct design enables the search for an apriori unknown
-number of arbitrarily shaped clusters, and at the same time
-allows to filter out noise. Due to its sequential formulation, the parallelization of DBSCAN renders a challenge. In
-this paper we present a new parallel approach which we call
-HPDBSCAN. It employs three major techniques in order
-to break the sequentiality, empower workload-balancing as
-well as speed up neighborhood searches in distributed parallel processing environments i) a computation split heuristic
-for domain decomposition, ii) a data index preprocessing
-step and iii) a rule-based cluster merging scheme.
-As a proof-of-concept we implemented HPDBSCAN as an
-OpenMP/MPI hybrid application. Using real-world data
-sets, such as a point cloud from the old town of Bremen,
-Germany, we demonstrate that our implementation is able
-to achieve a significant speed-up and scale-up in common
-HPC setups. Moreover, we compare our approach with previous attempts to parallelize DBSCAN showing an order of
-magnitude improvement in terms of computation time and
-memory consumption.</p>
-          <p><a href=presentations/2-Markus.pdf>[Presentation]</a> <a href=http://dx.doi.org/10.1145/2834892.2834894>[Paper]</a></p>
-        </div>
-        -->
-      <!--</div>-->
-      
-      <!--<hr class="featurette-divider">-->
-
-      <!--<div class="row featurette">-->
-      <!--  <div class="col-md-5">-->
-      <!--    <img class="featurette-image img-responsive" data-src="holder.js/500x500/auto" alt="Generic placeholder image">-->
-      <!--  </div>-->
-        <!-- 
-        <div class="col-md-7">
-          <h2 class="lead">LBANN: Livermore Big Artificial Neural Network HPC Toolkit<br>
-          4:20pm - 4:45</h2>
-          <p class="lead"><span class="text-muted">Brian Van Essen, Hyojin Kim, Roger Pearce, Kofi Boakye and Barry Chen</span></p>
-          <p>Recent successes of deep learning have been largely driven by the ability to train large models on vast amounts of data. We believe that High Performance Computing (HPC) will play an increasingly important role in helping deep learning achieve the next level of innovation fueled by neural network models that are orders of magnitude larger and trained on commensurately more training data. We are targeting the unique capabilities of both current and upcoming HPC sys- tems to train massive neural networks and are developing the Livermore Big Artificial Neural Network (LBANN) toolkit to exploit both model and data parallelism optimized for large scale HPC resources. This paper presents our prelimi- nary results in scaling the size of model that can be trained with the LBANN toolkit.</p>
-          <p><a href=presentations/3-Brian.pdf>[Presentation]</a> <a href=http://dx.doi.org/10.1145/2834892.2834897>[Paper]</a></p>
-        </div>
-        -->
-      <!--</div>-->
-      
-      <!--<hr class="featurette-divider">-->
-
-      <!--<div class="row featurette">-->
-      <!--  <div class="col-md-5">-->
-      <!--    <img class="featurette-image img-responsive" data-src="holder.js/500x500/auto" alt="Generic placeholder image">-->
-      <!--  </div>-->
-        <!-- 
-        <div class="col-md-7">
-          <h2 class="lead">Optimizing Deep Learning Hyper-Parameters Through an Evolutionary Algorithm<br>
-          4:45pm - 5:10pm</h2>
-          <p class="lead"><span class="text-muted">Steven Young, Derek Rose, Thomas Karnowski, Seung-Hwan Lim and Robert Patton</h2></span></p>
-          <p>There has been a recent surge of success in utilizing Deep Learning (DL) in imaging and speech applications for its relatively automatic feature generation and, in particular for convolutional neural networks (CNNs), high accuracy classification abilities. While these models learn their parameters through data-driven methods, model selection (as architecture construction) through hyper-parameter choices remains a tedious and highly intuition driven task. To address this, Multi-node Evolutionary Neural Networks for Deep Learning (MENNDL) is proposed as a method for automating network selection on computational clusters through hyper-parameter optimization performed via genetic algorithms.</p>
-          <p><a href=presentations/4-Steven.pdf>[Presentation]</a> <a href=http://dx.doi.org/10.1145/2834892.2834896>[Paper]</a></p>
-        </div>
-	-->
-        
-      <!--</div>-->
-	
-      <!--<hr class="featurette-divider">-->
-
-      <!--<div class="row featurette">-->
-        <!--
-        <div class="col-md-5">
-          <img class="featurette-image img-responsive" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
-        </div>
-        -->
-        
-        
-      <!--</div>-->
-      
-      <!--<hr class="featurette-divider">-->
-      
-      
-	
-	  <!--
-      <hr class="featurette-divider">
-Program
-	
-      <div class="row featurette">
-        <div class="col-md-7">
-          <h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
-          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-        </div>
-        <div class="col-md-5">
-          <img class="featurette-image img-responsive" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
-        </div>
-      </div>
-
-      <hr class="featurette-divider">
       -->
-
-      <!-- /END THE FEATURETTES -->
-
 
       <!-- FOOTER -->
       <footer>
@@ -398,15 +236,15 @@ Program
           <div style="float:left; width: 50%">
 
             <a name="contact"></a>
-            <p><b>Contact:  Robert M. Patton</b>, pattonrm "at" ornl.gov</p>
+            <p><b>Contact:  Steven R. Young</b>, youngsr "at" ornl.gov</p>
             <p>&copy; 2017 Oak Ridge National Laboratory</p>
           </div>
-           
+           <!--
           <div style="float:right;">
             <p>In cooperation with</p>
             <a class="brand" href="http://www.sighpc.org/"> <img src="images/sighpc_logo_72dpi.jpg" alt="Machine Learning in HPC Environments"></a>
           </div>
-          
+          -->
         </div>
         <p class="pull-right"><a href="#">Back to top</a></p>
       </footer>
