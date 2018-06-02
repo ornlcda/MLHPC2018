@@ -1,3 +1,3 @@
 # 3rd Workshop on Machine Learing in HPC Environments
 
-Find out more at [MLHPC2017](http://ornlcda.github.io/MLHPC2017).
+Find out more at [MLHPC2018](http://ornlcda.github.io/MLHPC2018).
